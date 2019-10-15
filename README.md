@@ -1,7 +1,7 @@
-# electron-webpack-quick-start
-> A bare minimum project structure to get started developing with [`electron-webpack`](https://github.com/electron-userland/electron-webpack).
+# KuberOptic - Refactored
+> The same as KuberOptic, but refactored to utilize electron-webpack and electron-builder
 
-Thanks to the power of `electron-webpack` this template comes packed with...
+Cool features:
 
 * Use of [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) for development
 * HMR for both `renderer` and `main` processes
@@ -10,37 +10,41 @@ Thanks to the power of `electron-webpack` this template comes packed with...
 
 Make sure to check out [`electron-webpack`'s documentation](https://webpack.electron.build/) for more details.
 
+Make sure to check out [`electron-builder`'s documentation](https://electron.build/) for more details.
+
+
+
 ## Getting Started
-Simply clone down this repository, install dependencies, and get started on your application.
 
 The use of the [yarn](https://yarnpkg.com/) package manager is **strongly** recommended, as opposed to using `npm`.
 
-```bash
-# create a directory of your choice, and copy template using curl
-mkdir new-electron-webpack-project && cd new-electron-webpack-project
-curl -fsSL https://github.com/electron-userland/electron-webpack-quick-start/archive/master.tar.gz | tar -xz --strip-components 1
+(You could still npm, if you want. It's not that big of a deal, but remember to delete `yarn.lock` if you want to use npm.)
 
-# or copy template using git clone
-git clone https://github.com/electron-userland/electron-webpack-quick-start.git
-cd electron-webpack-quick-start
-rm -rf .git
-
-# install dependencies
-yarn
-```
 
 ### Development Scripts
 
 ```bash
+# install dependencies
+yarn
+
 # run application in development mode
 yarn dev
 
 # compile source code and create webpack output
 yarn compile
 
-# `yarn compile` & create build with electron-builder
+# `yarn compile` & create build with electron-builder (packaging in distributable format)
 yarn dist
 
-# `yarn compile` & create unpacked build with electron-builder
-yarn dist:dir
+# create unpacked build with electron-builder - useful for testing (only generates the package directory without really packaging it)
+yarn pack
+
+# run this to ensure your native dependencies always match your electron version
+yarn postinstall
 ```
+
+### Notes
+
+No need to run `yarn compile` at this time if we are in development mode.
+
+No need to run `yarn dist` or `yarn pack` at this time. The package.json has not been configured to run these commands yet.

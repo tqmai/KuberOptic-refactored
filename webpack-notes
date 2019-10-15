@@ -9,3 +9,6 @@ Additionally, the "tsconfig.json" file gives additional configuration for the co
 
 FUTURE POTENTIAL TASKS:
 Add more configuration for sass-loader, node-sass
+REVIEW SETUP CONFIGURATION https://github.com/electron-userland/electron-builder
+Update "appId" in "build" in package.json (and also mac category)
+Add icons https://www.electron.build/icons

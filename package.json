@@ -1,13 +1,35 @@
 {
   "name": "kuberoptic-new",
-  "version": "0.0.0",
+  "description": "An Electron app for developers to visualize their Kubernetes clusters in real-time",
+  "version": "1.0.1",
+  "contributors": [
+    "Jacob Banks",
+    "Jay Dawson",
+    "Jimmy Deng",
+    "Juan Espinoza",
+    "Bryan Villafuerte",
+    "Darren Napier",
+    "Dominic Ameneyro",
+    "Timothy Mai"
+  ],
   "license": "MIT",
   "scripts": {
     "dev": "electron-webpack dev",
     "compile": "electron-webpack",
     "dist": "yarn compile && electron-builder",
-    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+    "pack": "electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps"
   },
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/oslabs-beta/kubernati/issues"
+  },
+  "homepage": "https://github.com/oslabs-beta/kubernati#readme",
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
