@@ -1,17 +1,23 @@
-// Initial welcome page. Delete the following line to remove it.
-'use strict';
-const styles=document.createElement('style');
-styles.innerText=`@import url(https://unpkg.com/spectre.css/dist/spectre.min.css);
-.empty{display:flex;
-  flex-direction:column;
-  justify-content:center;
-  height:100vh;position:relative}.footer{bottom:0;
-    font-size:13px;
-    left:50%;
-    opacity:.9;
-    position:absolute;
-    transform:translateX(-50%);
-    width:100%}`;
-const vueScript=document.createElement('script');
-vueScript.setAttribute('type','text/javascript'),vueScript.setAttribute('src','https://unpkg.com/vue'),vueScript.onload=init,document.head.appendChild(vueScript),document.head.appendChild(styles);
-function init(){Vue.config.devtools=false,Vue.config.productionTip=false,new Vue({data:{versions:{electron:process.versions.electron,electronWebpack:require('electron-webpack/package.json').version}},methods:{open(b){require('electron').shell.openExternal(b)}},template:`<div><div class=empty><p class="empty-title h5">Welcome to your new project!<p class=empty-subtitle>Get qwdqwd now and take advantage of the great documentation at hand.<div class=empty-action><button @click="open('https://webpack.electron.build')"class="btn btn-primary">Documentation</button> <button @click="open('https://electron.atom.io/docs/')"class="btn btn-primary">Electron</button><br><ul class=breadcrumb><li class=breadcrumb-item>electron-webpack v{{ versions.electronWebpack }}</li><li class=breadcrumb-item>electron v{{ versions.electron }}</li></ul></div><p class=footer>This  REALLY COOL intitial landing page can be easily removed from <code>src/renderer/index.js</code>.</p></div></div>`}).$mount('#app')}
+/**
+ * ************************************
+ *
+ * @module  index.js (inside /renderer) - originally called renderer.tsx
+ * @author Timothy Mai (reformatted version)
+ * @date 10/14/19
+ * @description main React.js component rendered by Electron, entry point to app
+ * 
+ * note: /renderer was called /client in original project
+ *
+ * ************************************
+ */
+
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+// import './styles.css';  // there was no style sheet in the original folder 
+import App from './components/app.tsx';
+
+// the below code was in the original code, but the variables aren't used anywhere
+// const GOOGLE_APPLICATION_CREDENTIALS = {};
+// const zone = 'us-central1-a';
+
+ReactDOM.render(<App />, document.querySelector('#app'));

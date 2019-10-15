@@ -5,7 +5,7 @@
  * @author Timothy Mai (reformatted version)
  * @date 10/14/19
  * @description main JS code run by Electron, creates Electron app
- *
+ * 
  * ************************************
  */
 

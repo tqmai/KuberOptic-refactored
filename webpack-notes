@@ -1,0 +1,11 @@
+We are using the "electron-webpack" module to create our webpack and allow for hot module reloading.
+
+Additional configuration was added to package.json under "electronWebpack".
+
+In addition, we have a file called "webpack.renderer.additions.js" that gives extra rules for electron-webpack.
+More specifically, this file allows for the compilation of React components and jsx files.
+
+Additionally, the "tsconfig.json" file gives additional configuration for the compilation of TS/TSX files.
+
+FUTURE POTENTIAL TASKS:
+Add more configuration for sass-loader, node-sass

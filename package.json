@@ -9,12 +9,26 @@
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "dependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "source-map-support": "^0.5.12"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.6.3",
+    "@types/react": "^16.9.6",
+    "@types/react-dom": "^16.9.2",
     "electron": "5.0.6",
     "electron-builder": "^21.0.11",
     "electron-webpack": "^2.7.4",
+    "electron-webpack-ts": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "typescript": "^3.6.4",
     "webpack": "~4.35.3"
+  },
+  "electronWebpack": {
+    "renderer": {
+      "webpackConfig": "webpack.renderer.additions.js"
+    }
   }
 }
